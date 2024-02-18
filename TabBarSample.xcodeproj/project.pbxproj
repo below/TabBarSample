@@ -13,6 +13,8 @@
 		CB6B20B22B82B9E000C8F65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6B20B02B82B9E000C8F65B /* Main.storyboard */; };
 		CB6B20B42B82B9E200C8F65B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6B20B32B82B9E200C8F65B /* Assets.xcassets */; };
 		CB6B20B72B82B9E200C8F65B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6B20B52B82B9E200C8F65B /* LaunchScreen.storyboard */; };
+		CB6B20BF2B82BF3E00C8F65B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6B20BE2B82BF3E00C8F65B /* SwiftUIView.swift */; };
+		CB6B20C12B82C49200C8F65B /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6B20C02B82C49200C8F65B /* SheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CB6B20B32B82B9E200C8F65B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6B20B62B82B9E200C8F65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6B20B82B82B9E200C8F65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6B20BE2B82BF3E00C8F65B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		CB6B20C02B82C49200C8F65B /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				CB6B20AA2B82B9E000C8F65B /* AppDelegate.swift */,
 				CB6B20AC2B82B9E000C8F65B /* SceneDelegate.swift */,
 				CB6B20AE2B82B9E000C8F65B /* ViewController.swift */,
+				CB6B20BE2B82BF3E00C8F65B /* SwiftUIView.swift */,
+				CB6B20C02B82C49200C8F65B /* SheetView.swift */,
 				CB6B20B02B82B9E000C8F65B /* Main.storyboard */,
 				CB6B20B32B82B9E200C8F65B /* Assets.xcassets */,
 				CB6B20B52B82B9E200C8F65B /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				CB6B20AF2B82B9E000C8F65B /* ViewController.swift in Sources */,
 				CB6B20AB2B82B9E000C8F65B /* AppDelegate.swift in Sources */,
+				CB6B20C12B82C49200C8F65B /* SheetView.swift in Sources */,
+				CB6B20BF2B82BF3E00C8F65B /* SwiftUIView.swift in Sources */,
 				CB6B20AD2B82B9E000C8F65B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
