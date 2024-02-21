@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SwiftUIView: View {
     @State var isPresented = false
+    var router: NavigationRouter
     var body: some View {
         
         Button("Show Sheet", action: {
@@ -16,11 +17,12 @@ struct SwiftUIView: View {
         })
             .sheet(
                 isPresented: $isPresented, content: {
-                SheetView()
+                    SheetView(isPresented: $isPresented, router: router)
             })
     }
 }
 
 #Preview {
-    SwiftUIView()
+    SwiftUIView(
+        router: NavigationRouter(navigationController: UINavigationController()))
 }

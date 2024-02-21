@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct SheetView: View {
+    @Binding var isPresented: Bool
+    var router: NavigationRouter
     var body: some View {
-        Text("Hello, Sheet!")
+        Button("Navigate Deep") {
+            isPresented = false
+            router.samplePush()
+            
+        }
     }
 }
 
 #Preview {
-    SheetView()
+    SheetView(isPresented: .constant(true), router: NavigationRouter(navigationController: UINavigationController()))
 }

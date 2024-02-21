@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let controller = UIHostingController(rootView: SwiftUIView())
+        guard let nc = self.navigationController else {
+            fatalError("We have no navigation controller")
+        }
+        let router = NavigationRouter(navigationController: nc)
+        let controller = UIHostingController(rootView: SwiftUIView(router: router))
         self.addChild(controller)
         self.view.addSubview(controller.view)
         controller.view.frame = self.view.bounds

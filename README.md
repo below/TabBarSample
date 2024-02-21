@@ -2,18 +2,30 @@
 
 This is a sample to find an issue I am having when incorporating SwiftUI views into UIKit Views. It's structure attempts to mimic the production app as good as possible, and to serve as a minimal sample.
 
-## The First Issue (Solved)
+## The Issue
 
-When presenting a sheet from my `SwiftUIView` by clicking the "Show Sheet" button, there is an error message:
+### To Reproduce
 
-```
-Presenting view controller <_TtGC7SwiftUI29PresentationHostingControllerVS_7AnyView_: 0x104023e00> from detached view controller <TabBarSample.ViewController: 0x10501c200> is not supported, and may result in incorrect safe area insets and a corrupt root presentation. Make sure <TabBarSample.ViewController: 0x10501c200> is in the view controller hierarchy before presenting from it. Will become a hard exception in a future release.
-```
+* Build and run the app
+* Click "Show Sheet"
+* Click "Navigate Deep"
+* From the pushed view controller, navigate back
 
-### Solution
+### Expected Result
 
-Instead of using a subclass of `UIHostingViewController`, the SwiftUI view is not added to the view controller as a child view controller. Thanks to @danyowdee for the idea!
+The first tab still has a highlight tint
 
-## The Second Issue
+### Actual Result
 
-Now it's even easier to work on that. Still now done …
+Tint everywhere is lost, everything is grey
+
+### Note:
+
+If I do not dismiss the sheet using `isPresented = false`, but dismiss it manually, things are fine.
+
+## Help wanted
+
+I am probably *Doing it Wrong™*. In our production app, we are replacing UIKit views with SwiftUI views in an existing architecture, and this leads to the weird way this controller is pushed.
+
+If you have any better ideas, please let me know! 
+
