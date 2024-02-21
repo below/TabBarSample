@@ -8,16 +8,15 @@
 import UIKit
 import SwiftUI
 
-class ViewController: UIHostingController<SwiftUIView> {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(rootView: SwiftUIView())
-        self.tabBarItem = UITabBarItem(title: "One", image: UIImage(systemName: "1.circle"), tag: 0)
+        let controller = UIHostingController(rootView: SwiftUIView())
+        self.addChild(controller)
+        self.view.addSubview(controller.view)
+        controller.view.frame = self.view.bounds
+        controller.didMove(toParent: self)
     }
 }
 
