@@ -10,11 +10,16 @@ import SwiftUI
 struct SheetView: View {
     @Binding var isPresented: Bool
     var router: NavigationRouter
+    @State private var navigate = false
     var body: some View {
         Button("Navigate Deep") {
             isPresented = false
-            router.samplePush()
-            
+            navigate = true
+        }
+        .onDisappear {
+            if navigate {
+                router.samplePush()
+            }
         }
     }
 }

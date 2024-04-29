@@ -23,9 +23,6 @@ Tint everywhere is lost, everything is grey
 
 If I do not dismiss the sheet using `isPresented = false`, but dismiss it manually, things are fine.
 
-## Help wanted
+## The Solution
 
-I am probably *Doing it Wrong™*. In our production app, we are replacing UIKit views with SwiftUI views in an existing architecture, and this leads to the weird way this controller is pushed.
-
-If you have any better ideas, please let me know! 
-
+Timeing is everything. I am not calling the push in `onDissapear`
